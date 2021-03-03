@@ -4,9 +4,6 @@ Page({
   data: {
     avatarUrl: "user-unlogin.png",
     userInfo: {},
-    result: "",
-    query: "",
-    show: false,
   },
 
   onLoad(options) {
@@ -27,35 +24,23 @@ Page({
       },
     })
   },
-  handleClick() {
-    this.setData({
-      result: "A柜03号",
-      show: true,
+  onGetOpenid() {
+    wx.cloud.callFunction({
+      name: "login",
+      data: {},
+      success: (res) => {
+        console.log("[云函数] [login] user openid: ", res.result.openid)
+        app.globalData.openid = res.result.openid
+        wx.redirectTo({
+          url: "../admin/admin",
+        });
+      },
+      fail: (err) => {
+        console.error("[云函数] [login] 调用失败", err)
+        wx.redirectTo({
+          url: "../home/home",
+        });
+      },
     })
-  },
-  onClose() {
-    this.setData({
-      show: false,
-      result: "",
-      query: "",
-    })
-  },
-  goAdminPage() {
-    if(app.globalData.openid) {
-      wx.navigateTo({
-        url: "../admin/admin",
-      })
-    }else {
-      wx.navigateTo({
-        url: "../authorize/authorize",
-      })
-    }
-   
-  },
-  getPhoneNumber(e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
-    console.log(e);
   },
 })

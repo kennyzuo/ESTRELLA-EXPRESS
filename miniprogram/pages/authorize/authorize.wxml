@@ -1,0 +1,28 @@
+<view class="container-wrapper">
+	<view class="container-body">
+
+		<view class="home-logo">
+			<van-icon name="{{avatarUrl}}" size="120px" />
+		</view>
+
+		<view class="btns-group">
+			<van-button
+			 type="primary"
+			 bind:click="onGetOpenid"
+			 size="large"
+			 block
+			>微信账号快速登录
+			</van-button>
+			<van-button
+			 plain
+			 type="primary"
+			 bind:click="handleClick"
+			 size="large"
+			 block
+			>暂不登录
+			</van-button>
+		</view>
+
+	</view>
+</view>
+

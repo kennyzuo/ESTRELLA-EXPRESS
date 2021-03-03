@@ -1,0 +1,62 @@
+<view class="container-wrapper">
+	<view class="container-body">
+		<view class="menu-wrapper">
+
+			<view class="menu-item" data-type="1" bindtap="tabChange">
+				<view>取件</view>
+				<view class="menu-item-info">扫描快递二维码</view>
+			</view>
+			<view class="menu-item" data-type="2" bindtap="tabChange">
+				<view>存件</view>
+				<view class="menu-item-info">扫描快递柜和快递二维码</view>
+			</view>
+		</view>
+
+		<view class="query-area">
+
+			<view wx:if="{{type == '2'}}" class="query-input-wrapper">
+				<van-search
+				 value="{{ query }}"
+				 class="query-input"
+				 bind:search="handleClick"
+				 placeholder="请输入柜号"
+				 use-left-icon-slot="{{true}}"
+				 clearable="{{false}}"
+				/>
+				<van-icon
+				 class="scan-icon"
+				 name="scan"
+				 size="32px"
+				 color="#07c160"
+				/>
+			</view>
+			<view class="query-input-wrapper">
+				<van-search
+				 value="{{ query }}"
+				 class="query-input"
+				 bind:search="handleClick"
+				 placeholder="请输入快递单号"
+				 use-left-icon-slot="{{true}}"
+				 clearable="{{false}}"
+				/>
+				<van-icon
+				 class="scan-icon"
+				 name="scan"
+				 size="32px"
+				 color="#07c160"
+				/>
+			</view>
+			<view class="{{ type=='1'? 'query-btn-wrapper': 'query-btn-wrapper in-btn' }}">
+				<van-button
+				 type="primary"
+				 bind:click="handleClick"
+				 size="large"
+				 block
+				>{{btnText}}
+				</van-button>
+			</view>
+		</view>
+
+	</view>
+</view>
+

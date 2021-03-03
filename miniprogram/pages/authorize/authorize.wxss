@@ -1,0 +1,6 @@
+.btns-group {
+  padding: 0 20vw;
+}
+.btns-group .van-button {
+  margin-bottom: 12px;
+}

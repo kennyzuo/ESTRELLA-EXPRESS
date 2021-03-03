@@ -1,5 +1,5 @@
-<view class="home-wrapper">
-	<view class="home-body">
+<view class="container-wrapper">
+	<view class="container-body">
 		<view class="home-logo">
 			<van-icon name="{{avatarUrl}}" size="120px"></van-icon>
 		</view>
@@ -31,7 +31,7 @@
 			</view>
 		</view>
 
-		<view class="admin-wrapper">
+		<view class="admin-wrapper" bindtap="goAdminPage">
 			<text class="admin-text">管理员</text>
 		</view>
 
