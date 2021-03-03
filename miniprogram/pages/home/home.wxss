@@ -1,4 +1,60 @@
-.van-button--primary {
-  font-size: 20px;
-  background-color: pink;
+.home-wrapper {
+  background: #fff;
+  min-height: 100vh;
+}
+.home-logo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.query-area {
+  position: relative;
+  padding: 12px;
+}
+
+.query-input-wrapper {
+  position: relative;
+}
+
+.scan-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.query-input-wrapper .van-field__control {
+  font-size: 18px;
+  color: #222;
+}
+.query-input-wrapper .field-index--van-field {
+  padding: 16px 16px 16px 0 !important;
+}
+
+.query-btn-wrapper {
+  padding: 24px 12px;
+}
+.result-area {
+  font-size: 42px;
+  color: #07c160;
+  height: 32vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-wrapper {
+  position: fixed;
+  right: 16px;
+  bottom: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 2px 2.5px 8px 0px rgba(90, 211, 148, 0.4);
+  background: linear-gradient(0deg, rgb(90, 211, 148, 1), rgb(72, 224, 145, 1));
+  color: #fff;
+  font-size: 16px;
 }

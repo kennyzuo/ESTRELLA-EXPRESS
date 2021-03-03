@@ -2,13 +2,14 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: "../user-unlogin.png",
+    avatarUrl: "user-unlogin.png",
     userInfo: {},
-    list: [],
-    query: ''
+    result: "",
+    query: "",
+    show: false,
   },
 
-  onLoad (options) {
+  onLoad(options) {
     // 获取用户信息
     wx.getSetting({
       success: (res) => {
@@ -27,9 +28,16 @@ Page({
     })
   },
   handleClick() {
-    let list = [1,23,4]
     this.setData({
-      list
+      result: "A柜03号",
+      show: true,
     })
-  }
+  },
+  onClose() {
+    this.setData({
+      show: false,
+      result: "",
+      query: ""
+    })
+  },
 })
