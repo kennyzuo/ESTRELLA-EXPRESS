@@ -1,0 +1,10 @@
+<view class="home-wrapper">
+	<view class="home-body">
+		<view class="query-area">
+			<van-search value="{{ query }}" bind:search="handleClick" placeholder="请输入搜索关键词" />
+			<van-button type="primary" bind:click="handleClick" block>查询</van-button>
+		</view>
+		<view class="result-area" />
+	</view>
+</view>
+

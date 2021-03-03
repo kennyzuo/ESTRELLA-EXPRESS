@@ -1,0 +1,32 @@
+{
+  "prettier.enabledLanguageIds": [
+    "csharp",
+    "css",
+    "elm",
+    "flow",
+    "graphql",
+    "handlebars",
+    "html",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "less",
+    "markdown",
+    "mdx",
+    "php",
+    "postcss",
+    "ruby",
+    "scss",
+    "solidity",
+    "svelte",
+    "svg",
+    "typescript",
+    "typescriptreact",
+    "twig",
+    "vue",
+    "xml",
+    "yaml"
+  ]
+}

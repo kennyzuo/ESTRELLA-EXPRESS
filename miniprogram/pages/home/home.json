@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "溪咚快递柜",
+  "usingComponents": {
+    "van-button": "../../components/@vant/weapp/button/index",
+    "van-search": "../../components/@vant/weapp/search/index"
+  }
+}
