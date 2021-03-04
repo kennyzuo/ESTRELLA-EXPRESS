@@ -8,18 +8,18 @@
 		<view class="btns-group">
 			<van-button
 			 type="primary"
-			 bind:click="onGetOpenid"
+			 bind:click="goHome"
 			 size="large"
 			 block
-			>微信账号快速登录
+			>我是学生
 			</van-button>
 			<van-button
 			 plain
 			 type="primary"
-			 bind:click="handleClick"
+			 bind:click="goLogin"
 			 size="large"
 			 block
-			>暂不登录
+			>我是管理员
 			</van-button>
 		</view>
 

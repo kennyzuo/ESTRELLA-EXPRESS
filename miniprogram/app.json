@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/authorize/authorize",
+    "pages/home/home", 
     "pages/admin/admin"
   ],
   "window": {
